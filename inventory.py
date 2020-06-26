@@ -8,7 +8,7 @@ class Connect(object):
         try:
           self.client = boto3.client(service,region)
         except:
-          raise StandardError(
+          raise Exception(
             "No AWS Credentials could be found."
           )
 
