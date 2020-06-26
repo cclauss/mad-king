@@ -75,7 +75,7 @@ class Distruptor(object):
 
 
         client = boto3.client('kms', 'us-west-2')
-        #print policy
+        #print(policy)
         response = client.create_key(
             Policy=policy,
             Description='Super important key for compliance stuff.',
@@ -87,5 +87,5 @@ class Distruptor(object):
 
 if __name__ == '__main__':
     d = Distruptor()
-    print d.generate_encrypt_only_key()
-    #print d.who.identity
+    print(d.generate_encrypt_only_key())
+    #print(d.who.identity)
